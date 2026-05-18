@@ -1,4 +1,6 @@
 Best for google chrome when visiting the website.
+https://z-kioskpro.com/display
+https://z-kioskpro.com/
 
 # ZionTech Clinic Queuing System
 
