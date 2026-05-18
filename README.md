@@ -1,3 +1,5 @@
+Best for google chrome when visiting the website.
+
 # ZionTech Clinic Queuing System
 
 A licensed and published clinic queuing management system developed for ZionTech to organize patient flow across multiple clinic departments while supporting priority-based queue handling.
