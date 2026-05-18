@@ -1,0 +1,194 @@
+/* === Reset and Base === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* === Body Setup === */
+/* === Body Background === */
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background: url('../assets/images/login_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    padding-right: 8%;
+    position: relative;
+}
+
+/* Remove old decorative gradient shape */
+body::before {
+    display: none;
+}
+
+/* === Login Card Overlay === */
+.login-card {
+    background: rgba(255, 255, 255, 0.95); /* slightly transparent to show background */
+    width: 100%;
+    max-width: 450px;
+    padding: 60px 50px;
+    border-radius: 24px;
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.25);
+    animation: slideIn 0.8s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28);
+}
+
+
+/* === Headings === */
+.login-card h2 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 35px;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* === Input Fields === */
+.login-card input {
+    width: 100%;
+    padding: 15px 18px;
+    margin-bottom: 22px;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    background: #f9fafc;
+    transition: all 0.3s ease;
+}
+
+.login-card input:focus {
+    border-color: #007BFF;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
+}
+
+/* === Button === */
+.login-card button {
+    width: 100%;
+    background: linear-gradient(135deg, #007BFF, #00b4d8);
+    color: #fff;
+    padding: 14px;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-card button:hover {
+    background: linear-gradient(135deg, #0056b3, #0096c7);
+    transform: translateY(-2px);
+}
+
+/* === Error Message === */
+.error-message {
+    background: #ffe5e5;
+    color: #d8000c;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    animation: shake 0.3s ease-in-out;
+}
+
+/* === Footer (Powered By) === */
+.footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 0.3px;
+}
+
+.footer span {
+    color: #007BFF;
+    font-weight: 600;
+}
+
+/* === Animations === */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20%,
+    60% {
+        transform: translateX(-8px);
+    }
+
+    40%,
+    80% {
+        transform: translateX(8px);
+    }
+}
+
+/* === Responsive Design === */
+@media (max-width: 900px) {
+    body {
+        justify-content: center;
+        padding-right: 0;
+        background: linear-gradient(135deg, #d6f0da, #b8e0c0);
+    }
+
+    .login-card {
+        width: 90%;
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 50px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 35px 25px;
+        border-radius: 18px;
+    }
+
+    .login-card h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .login-card input,
+    .login-card button {
+        font-size: 15px;
+        padding: 12px 14px;
+    }
+
+    .footer {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+}
